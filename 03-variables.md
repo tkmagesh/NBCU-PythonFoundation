@@ -36,3 +36,9 @@
    a, b = b, a
    ```
 
+# Constants
+- No support for constants
+- Convention to treat a variable as a constant
+```python
+APP_NAME = "PayMaster"
+```
