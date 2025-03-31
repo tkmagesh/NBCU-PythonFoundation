@@ -52,3 +52,14 @@ jupyter notebook
 ```
 ### Cloud Notebook
 - https://colab.research.google.com/
+
+## Python Applications
+- Visualization
+- Mathematical Problems 
+    - Machine Learning
+    - Artificial Intelligence
+- Data Analysis
+- Automation
+- Web Application
+- Scripting
+
