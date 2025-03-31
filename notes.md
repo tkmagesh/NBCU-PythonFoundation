@@ -23,3 +23,32 @@
 
 ## Repository
 - https://github.com/tkmagesh/nbcu-pythonfoundation
+
+## Using Python
+### Local
+#### Installation
+- Download from https://python.org
+- Using "brew"
+```shell
+brew install python
+```
+#### REPL
+- Read Evaluate Print Loop
+```shell
+$ python
+```
+- use "exit()" to exit the REPL
+#### Execute a python program
+```shell
+$ python [filename.py]
+```
+#### Install & Use Jupyter Notebook
+```shell
+python -m venv  [venv_name]
+source [venv_name]/bin/activate
+pip ipykernel notebook
+python -m ipykernel install --user --name=python-class
+jupyter notebook
+```
+### Cloud Notebook
+- https://colab.research.google.com/
