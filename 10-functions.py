@@ -92,3 +92,40 @@ greet_v2(name = "Justyn", msg = "Have a wonderful day!")
 """ order of arguments does not matter when keyword (parameter names) are used """
 greet_v2(msg="Time for lunch!", name="Ashley")
 
+""" 
+    Variadic function (positional arguments)
+    A function designed to take varying number of arguments
+    All the arguments are received as a "tuple" by the function
+"""
+
+def aggregate(*args):
+    result = 0
+    for no in args:
+        result += no
+    return result
+
+print(aggregate(10))
+print(aggregate(10,20))
+print(aggregate(10,20,30,40))
+print(aggregate())
+
+
+""" 
+    Variadic function (keyword arguments)
+    A function designed to take varying number of arguments
+    All the arguments are received as a "dictionary" by the function
+"""
+
+def process(**kwargs):
+    # print(kwargs)
+    # print(type(kwargs))
+    """ 
+    for key in kwargs:
+        print("key :", key)
+    for val in kwargs.values():
+        print("value :", val) 
+    """
+    for key in kwargs:
+        print(f"key = {key}, value = {kwargs[key]}")
+
+process(id=100, name="Pen", cost=10, in_stock=True)
