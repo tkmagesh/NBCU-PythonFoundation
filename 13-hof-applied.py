@@ -46,12 +46,16 @@ def App():
     while True:
         user_choice = get_user_choice()
         if user_choice == '1':
+            # perform_operation(add)
             perform_operation(lambda x,y : x + y)
         elif user_choice == '2':
+            # perform_operation(subtract)
             perform_operation(lambda x,y : x - y)
         elif user_choice == '3':
+            # perform_operation(multiply)
             perform_operation(lambda x,y : x * y)
         elif user_choice == '4':
+            # perform_operation(divide)
             perform_operation(lambda x,y : x / y)
         elif user_choice == '5':
             print("Thank you!")
