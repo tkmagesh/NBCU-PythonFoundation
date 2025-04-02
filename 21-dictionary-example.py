@@ -36,13 +36,15 @@ print(f"Stock value : {stock_value}")
 """
 
 # transform the product list into a list of product values
-product_value_list = [p["cost"] * p["units"] for p in products if p["in_stock"]]
+# product_value_list = [p["cost"] * p["units"] for p in products if p["in_stock"]]
+unpacked_products = [ p.values() for p in products if p["in_stock"]]
+product_value_list = [cost * units for id, name, cost, units, in_stock in unpacked_products]
 
 # aggregate the product value list
 stock_value = sum(product_value_list)
 
 # transform the product list into a list of strings for printing
-product_list_str = [f"id = {p["id"]}, name = {p["name"]}, cost = {p["cost"]}, units = {p["units"]}, in-stock = {p["in_stock"]}" for p in products if p["in_stock"]]
+product_list_str = [f"id = {id}, name = {name}, cost = {cost}, units = {units}, in-stock = {in_stock}" for id, name, cost, units, in_stock in [ p.values() for p in products ] if in_stock]
 
 # append the list of strings with a new line (\n)
 product_list_output = "\n".join(product_list_str)
